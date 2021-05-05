@@ -1,0 +1,14 @@
+{
+	"name": "Task1: Caesar",
+	"version": "1.0.0",
+	"description": "Task1: Caesar",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"author": "Korshunov Egor",
+	"license": "MIT",
+	"dependencies": {
+		"commander": "^7.2.0"
+	}
+}
