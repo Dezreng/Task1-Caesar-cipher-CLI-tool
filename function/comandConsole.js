@@ -1,4 +1,5 @@
-const { Command} = require('commander');
+const { Command } = require('commander');
+const { shiftChar } = require('./shift');
 
 const program = new Command();
 program.requiredOption('-s, --shift <number>')
@@ -10,16 +11,17 @@ program.parse();
 
 const options = program.opts();
 
-if (options.action !== 'encode' && options.action !== 'decode'){
+if ( options.action !== 'encode' && options.action !== 'decode' ) {
     console.error("Action must be 'encode' or 'decode'");
     process.exit(1);
 };
 
-if(Number.isInteger(+options.shift) !== true){
+if ( isNaN(+options.shift) ){
 	console.error("The shift must be a number");
 	process.exit(1);
 };
 
 module.exports = {
-	options,	
+	options: options,
+	shift: shiftChar(+options.shift)
 };
