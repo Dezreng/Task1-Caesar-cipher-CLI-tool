@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-exports.fileСheck = ( options ) => {
+exports.fileCheck = ( options ) => {
 	 if (fs.existsSync(options)) {
     return fs.createWriteStream(options, {flags: 'a'});
   } else {

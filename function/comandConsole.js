@@ -21,7 +21,7 @@ if ( isNaN(+options.shift) ){
 	process.exit(1);
 };
 
-if ( options.input === options.output ){
+if ( options.input === options.output && options.output != undefined){
 	console.error("The files for reading and writing must be different.");
 	process.exit(1);
 };
